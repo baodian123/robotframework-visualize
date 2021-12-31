@@ -1,0 +1,12 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Keywords ***
+Open ezScrum Page
+    Open Browser To Page    http://xxx.xxx.xxx.xxx:8080/ezScrum/logon.do
+
+Open Browser To Page
+    [Arguments]    ${page}
+    Create Webdriver    Chrome
+    Go To    ${page}
+    Maximize Browser Window
